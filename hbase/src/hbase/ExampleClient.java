@@ -12,7 +12,7 @@ public class ExampleClient {
     public static void main(String[] args) throws IOException {  
           
           Configuration conf = HBaseConfiguration.create();  
-          conf.set("hbase.zookeeper.quorum", "master");//使用eclipse时必须添加这个，否则无法定位  
+          conf.set("hbase.zookeeper.quorum", "server61");//使用eclipse时必须添加这个，否则无法定位  
           conf.set("hbase.zookeeper.property.clientPort", "2181");  
           HBaseAdmin admin = new HBaseAdmin(conf);// 新建一个数据库管理员  
           HTableDescriptor tableDescriptor = admin.getTableDescriptor(Bytes.toBytes("users"));  
